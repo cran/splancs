@@ -22,7 +22,7 @@ Graphics
 Plots point and polygon data sets on the current graphics device.
 }
 \usage{
-polymap(poly,add=F,axes=T,xlab="",ylab="",\dots)
+polymap(poly,add=F,xlab="",ylab="",axes=T,...)
 }
 \arguments{
 \item{pts}{
@@ -31,12 +31,12 @@ a points data set.
 \item{add}{
 if false, start a new plot. If true, superimpose on current plot.
 }
+\item{xlab,ylab}{
+Label strings for x and y axes.
+}
 \item{axes}{
 if true, display axes with labelling. If false, do not display any 
 axes on the plot.
-}
-\item{xlab,ylab}{
-Label strings for x and y axes.
 }
 \item{...}{
 Graphical arguments may be entered, and these are passed to the
@@ -50,9 +50,8 @@ as points or polygons. For \code{polymap}, the last point in the data set
 is drawn connected to the first point.
 }
 \section{NOTES}{
-When starting a new plot, \code{pointmap} and \code{polymap} set the axes to preserve
-the aspect ratio in the data, and the graphics parameter \code{pty} is set
-to \code{"s"} to produce square plots.
+\code{pointmap} and \code{polymap} preserve
+the aspect ratio in the data by using the \code{asp=1} plot argument.
 Graphical parameters can also be supplied to these routines, and are passed 
 through to \code{plot}. Some useful parameters include \code{pch} to change the plotting
 character for points, \code{lty} to change the line type for polygons, and 

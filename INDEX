@@ -15,6 +15,7 @@ areapl                   Calculate area of polygon
 as.points                Creates data in spatial point format
 bbox                     Generate a bounding box round a point object
 bodmin                   Bodmin Moors granite tors
+burkitt                  Burkitt's lymphoma in Uganda
 cardiff                  Locations of homes of juvenile offenders
 csr                      Generate completely spatially random points on a
                          polygon
@@ -61,6 +62,7 @@ sbox                     Generate a box surrounding a point object
 secal                    Standard errors for the difference between two
                          K-functions
 shift                    Shift a point data set
+southlancs               Cancer cases in Chorley-Ribble
 splancs                  Return version number and author information
 spoints                  Point Objects
 stdiagn                  Summary plots for clustering analysis

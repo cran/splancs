@@ -22,7 +22,7 @@ Space-time kernel
 Compute the space-time kernel
 }
 \usage{
-kernel3d(pts, times, xgr, ygr, tgr, hxy, ht)
+kernel3d(pts, times, xgr, ygr, zgr, hxy, hz)
 }
 \arguments{
 \item{pts}{
@@ -37,13 +37,13 @@ The values of x at which to compute the kernel function.
 \item{ygr}{
 The values of y at which to compute the kernel function.
 }
-\item{tgr}{
-The values of t at which to compute the kernel function.
+\item{zgr}{
+The values of time at which to compute the kernel function.
 }
 \item{hxy}{
 The quartic kernel width in the x and y direction.
 }
-\item{ht}{
+\item{hz}{
 The quartic kernel width in the temporal direction.
 }}
 \value{
@@ -64,6 +64,18 @@ the original sources can be accessed at:
 \url{http://www.maths.lancs.ac.uk/~rowlings/Splancs/}. See also Bivand, R. and
 Gebhardt, A. 2000 Implementing functions for spatial statistical analysis
 using the R language. Journal of Geographical Systems, 2, 307-317.
+}
+
+\examples{
+data(burkitt)
+b3d <- kernel3d(burpts, burkitt$t, seq(250,350,10), seq(250, 400, 10),
+  seq(365,5800,365), 30, 200)
+brks <- quantile(b3d$v, seq(0,1,0.05))
+cols <- heat.colors(length(brks)-1)
+oldpar <- par(mfrow=c(3,5))
+for (i in 1:15) image(seq(250,350,10), seq(250, 400, 10), b3d$v[,,i],
+  asp=1, xlab="", ylab="", main=1960+i, breaks=brks, col=cols)
+par(oldpar)
 }
 
 % Converted by Sd2Rd version 0.3-3.
