@@ -1,0 +1,75 @@
+# Copyright Barry Rowlingson <b.rowlingson@lancaster.ac.uk> and 
+# Peter Diggle (c) 1991-3; http://www.maths.lancs.ac.uk/~rowlings/Splancs/
+# R port: copyright 1998-2000 by Roger S. Bivand
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+
+kernel2d <- function(pts,poly,h0,nx=20,ny=20,kernel='quartic')
+{
+	if(!is.points(pts))stop('Invalid points argument')
+	
+	if(!is.points(poly))stop('Invalid poly argument')
+	
+	nptsk <- npts(pts)
+	npoly <- length(poly[,1])
+	poly <- rbind(poly,c(poly[1,1],poly[1,2]))
+	
+	
+	xrang <- range(poly[,1],na.rm=T)
+	yrang <- range(poly[,2],na.rm=T)
+	
+	bb <- bbox(poly)
+	a1 <- xrang[1]
+	a2 <- xrang[2]
+	b1 <- yrang[1]
+	b2 <- yrang[2]
+	cat("Xrange is ",a1,a2,"\n")
+	cat("Yrange is ",b1,b2,"\n")
+	xgrid <- rep(0,nx)
+	ygrid <- rep(0,ny)
+	zgrid <- matrix(0,nx,ny)
+	if(kernel=='quartic')
+	{
+		cat('Doing quartic kernel\n')
+#		library.dynam('splancs','krnqrt.o')
+		storage.mode(zgrid) <- "double"
+		klist <- .Fortran("krnqrt",
+			as.double(pts[,1]),
+			as.double(pts[,2]),
+			as.integer(nptsk),
+			as.double(poly[,1]),
+			as.double(poly[,2]),
+			as.integer(npoly),
+			as.double(h0),
+			as.double(a1),
+			as.double(a2),
+			as.double(b1),
+			as.double(b2),
+			as.integer(nx),
+			as.integer(ny),
+			xgrid=as.double(xgrid),
+			ygrid=as.double(ygrid),
+			zgrid=(zgrid)
+			)
+		klist$zgrid[klist$zgrid<0] <- NA
+		res <- list(x=klist$xgrid,y=klist$ygrid,z=klist$zgrid,
+			 h0=h0,kernel=kernel)
+	}
+	else
+	{
+		stop('Invalid kernel function specification')
+	}
+res
+}
+
+	
+	

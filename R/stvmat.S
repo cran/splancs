@@ -1,0 +1,73 @@
+# Copyright Barry Rowlingson <b.rowlingson@lancaster.ac.uk> and 
+# Peter Diggle (c) 1991-3; http://www.maths.lancs.ac.uk/~rowlings/Splancs/
+# R port: copyright 1998-2000 by Roger S. Bivand
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+
+stvmat <- function(pts,times,poly,tlim,s,tm)
+{
+#	mathlib.dynam('splancs','stsecal.o')
+# full spacetime variance/covariance matrix
+	tlow <- min(tlim)
+        tupp <- max(tlim)
+
+	ns <- length(s)
+        nt <- length(tm)
+        tm <- sort(tm)
+
+	np <- npts(poly)
+        xp <- c(poly[, 1],poly[1,1])
+        yp <- c(poly[, 2],poly[1,2])
+
+	n <- npts(pts)
+	
+
+	x <- pts[, 1]
+	y <- pts[, 2]
+        z <- times
+
+        svec <- vector(mode="numeric", length=ns)
+        tvec <- vector(mode="numeric", length=nt)
+
+	smat <- matrix(0,ncol=ns,nrow=n)
+        tmat <- matrix(0,ncol=nt,nrow=n)
+
+        long <- ns*nt
+        cmat <- matrix(0,ncol=long,nrow=long)
+
+slist <- .Fortran("stsecal",
+                as.double(x),
+                as.double(y),
+                as.integer(n),
+                as.double(xp),
+                as.double(yp),
+                as.integer(np),
+                as.double(s),
+                as.integer(ns),
+		as.double(smat),
+		as.double(svec),
+		as.double(z),
+		as.double(tlow),
+		as.double(tupp),
+		as.double(tm),
+		as.integer(nt),
+		as.double(tmat),
+		as.double(tvec),
+		as.integer(long),
+		varmat=as.double(cmat)
+		)
+
+ ans <- matrix(slist$varmat,nrow=long,byrow=T)
+ ans <- array(ans,dim=c(nt,ns,nt,ns))
+ans
+}
+
