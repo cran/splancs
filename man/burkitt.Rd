@@ -60,7 +60,7 @@ par(op)
 op <- par(mfrow=c(2,2))
 for (i in 1:4) {
 	polymap(burbdy)
-	pointmap(burpts[which(codes(quarters(burdates)) == i),], add=TRUE,
+	pointmap(burpts[which(unclass(quarters(burdates)) == i),], add=TRUE,
 pch=19)
 	title(paste(i, "Q", sep=""))
 }
@@ -68,7 +68,7 @@ par(op)
 op <- par(mfrow=c(3,4))
 for (i in 1:12) {
 	polymap(burbdy)
-	pointmap(burpts[which(codes(months(burdates)) == i),], add=TRUE, pch=19)
+	pointmap(burpts[which(unclass(months(burdates)) == i),], add=TRUE, pch=19)
 	title(levels(months(burdates, FALSE))[i])
 }
 par(op)
