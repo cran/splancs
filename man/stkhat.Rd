@@ -1,17 +1,6 @@
 % Copyright Barry Rowlingson  and 
 % Peter Diggle (c) 1991-3; http://www.maths.lancs.ac.uk/~rowlings/Splancs/
 % R port: copyright 1998-2000 by Roger S. Bivand
-%
-%  This program is free software; you can redistribute it and/or modify
-%  it under the terms of the GNU General Public License as published by
-%  the Free Software Foundation; either version 2 of the License, or
-%  (at your option) any later version.
-%
-%  This program is distributed in the hope that it will be useful,
-%  but WITHOUT ANY WARRANTY; without even the implied warranty of
-%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%  GNU General Public License for more details.
-%
 
 \name{stkhat}
 \alias{stkhat}
@@ -47,14 +36,12 @@ A vector of times for the analysis
 A list with the following components is returned:
 \item{s, t}{The spatial and temporal scales}
 \item{ks}{The spatial K-function}
-\item{kt}}{The temporal K-function}
+\item{kt}{The temporal K-function}
 \item{kst}{The space-time K-function}
 For details see Diggle, Chetwynd, Haggkvist, and Morris (1995)
 }
 \seealso{
 \code{\link{stsecal}}, \code{\link{stvmat}}, \code{\link{stmctest}}, \code{\link{stdiagn}}
-
-
 }
 
 \references{

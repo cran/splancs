@@ -1,17 +1,6 @@
 # Copyright Barry Rowlingson <b.rowlingson@lancaster.ac.uk> and 
 # Peter Diggle (c) 1991-3; http://www.maths.lancs.ac.uk/~rowlings/Splancs/
 # R port: copyright 1998-2000 by Roger S. Bivand
-#
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
 
 kernel2d <- function(pts,poly,h0,nx=20,ny=20,kernel='quartic')
 {
@@ -24,8 +13,8 @@ kernel2d <- function(pts,poly,h0,nx=20,ny=20,kernel='quartic')
 	poly <- rbind(poly,c(poly[1,1],poly[1,2]))
 	
 	
-	xrang <- range(poly[,1],na.rm=T)
-	yrang <- range(poly[,2],na.rm=T)
+	xrang <- range(poly[,1],na.rm=TRUE)
+	yrang <- range(poly[,2],na.rm=TRUE)
 	
 	bb <- bbox(poly)
 	a1 <- xrang[1]

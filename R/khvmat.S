@@ -1,17 +1,6 @@
 # Copyright Barry Rowlingson <b.rowlingson@lancaster.ac.uk> and 
 # Peter Diggle (c) 1991-3; http://www.maths.lancs.ac.uk/~rowlings/Splancs/
 # R port: copyright 1998-2000 by Roger S. Bivand
-#
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
 
 khvmat <- function(pts1,pts2,poly,s)
 {
@@ -48,7 +37,7 @@ slist <- .Fortran("khvmat",
 		varmat=as.double(cmat)
 		)
 
-ans <- matrix(slist$varmat,nrow=ns,byrow=T)
+ans <- matrix(slist$varmat,nrow=ns,byrow=TRUE)
 ans <- ans+t(ans)
 diag(ans) <- diag(ans)/2
 

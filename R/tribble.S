@@ -1,17 +1,6 @@
 # Copyright Barry Rowlingson <b.rowlingson@lancaster.ac.uk> and 
 # Peter Diggle (c) 1991-3; http://www.maths.lancs.ac.uk/~rowlings/Splancs/
 # R port: copyright 1998-2000 by Roger S. Bivand
-#
-#  This program is free software; you can redistribute it and/or modify
-#  it under the terms of the GNU General Public License as published by
-#  the Free Software Foundation; either version 2 of the License, or
-#  (at your option) any later version.
-#
-#  This program is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU General Public License for more details.
-#
 
 tribble <- function(ccflag,vars=NULL,alphas=NULL,betas=NULL,rho
   ,which=1:length(alphas),covars=NULL,thetas=NULL,steps=NULL
@@ -44,7 +33,7 @@ tribble <- function(ccflag,vars=NULL,alphas=NULL,betas=NULL,rho
 		if(!any(wsu == 1:ndpars))stop('Invalid values in "which"')
 # scale distances
 		disscale <- apply(vars,2,max)
-		vars <- vars/matrix(disscale,ncol=ndvars,nrow=npt,byrow=T)
+		vars <- vars/matrix(disscale,ncol=ndvars,nrow=npt,byrow=TRUE)
 	}
 	if(is.null(covars) | is.null(thetas)){
 		ncovars <- 0
@@ -55,12 +44,20 @@ tribble <- function(ccflag,vars=NULL,alphas=NULL,betas=NULL,rho
 		if(dim(covars)[1] != npt)stop('Number of covariates inconsistent with number of cases/controls')
 # scale covariates
 		covscale <- abs(apply(covars,2,max))
-		covars <- covars/matrix(covscale,ncol=ncovars,nrow=npt,byrow=T)
+		covars <- covars/matrix(covscale,ncol=ncovars,nrow=npt,byrow=TRUE)
 		
 	}
 
-	allvars <- ifelse(ncovars != 0, cbind(vars,covars),
-             matrix(vars, ncol=ndvars, nrow=npt))
+#	allvars <- ifelse(ncovars != 0, cbind(vars,covars),
+#             matrix(vars, ncol=ndvars, nrow=npt))
+# fixing that ifelse thing gives an R tribble function that
+# reproduces exactly the Splus output. (B.Rowlingson@lancaster.ac.uk
+# 13 Feb 2002)
+        if (ncovars != 0){
+          allvars <- cbind(vars, covars)
+        }else{
+          allvars <- matrix(vars, ncol=ndvars, nrow=npt)
+        }
 
 	nallpars <- ndvars*2+ncovars + 1
 	
