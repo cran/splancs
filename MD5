@@ -1,5 +1,5 @@
-78fc1d999ef99cc9ce28906bd1d4c998 *ChangeLog
-c8491ae3b77d83d2e01323860889becb *DESCRIPTION
+7acba8f3374b4179a02f6d5ccd06a504 *ChangeLog
+171e26d9ef53975bbdd0fdd1500e4553 *DESCRIPTION
 a3ba542a68d05af9a8ea03fae9da3c88 *LICENCE
 8ee803e936eea47efaa5a4ba338f6476 *NAMESPACE
 fde3be84d206b96ba2dbe2245dba7cfc *R/Fhat.S
@@ -12,7 +12,7 @@ dbf416613866c0b5d6eb883112c10063 *R/Fzero.S
 0e80933ff94110bd8fc43c72e8a62836 *R/Kenv.tor.S
 3b62e3d1387aef3c9aeaa0e9cc5b1729 *R/addpoints.S
 41f108d573775ddef20be1dc50d94537 *R/area.S
-2bccdbc0e9cc286b9710f480fa9e47d5 *R/as.points.S
+d6fc3d4e3a8cfc5e0810c8df3f487bf8 *R/as.points.S
 684f5223e06b2649b5cd793e82467fc2 *R/bbox.S
 41952424a0ee2f2efcd48d080729a165 *R/csr.S
 43867c2b75feeaccb1dcf9360a7ec4c7 *R/delpoints.S
@@ -23,7 +23,7 @@ d136b521d22ca3b5d70d3183b7eb117f *R/inout.S
 cd532e8720e67d4fddf7827905cb648a *R/inpip.S
 11d9ec6b53a3d9f9b88f23029e761289 *R/is.points.S
 56505f507bfd1997d47245101817d81a *R/k12hat.S
-e485de6cd1ae40c7e16ce1516fa076ef *R/kernel2d.S
+415b2527213b8e9529b7720cc03073c8 *R/kernel2d.S
 6cec97424f884c845c1b9428674ca17d *R/kernel3d.S
 21cfaa3901cd28aaea11cd3bf6085802 *R/kernrat.S
 1c877043fa4ea750ff6c601122b5d7b6 *R/kerview.S
@@ -70,7 +70,7 @@ bd254c7837e8e40390841505b43117a2 *data/bodmin.rda
 35815dc81afa6bb94af6b4659c061124 *data/okwhite.rda
 191aeb75fdba6ad17b240d7e4d561aa0 *data/southlancs.rda
 54715466d8a45800757a69008e1ef37c *data/uganda.rda
-78fc1d999ef99cc9ce28906bd1d4c998 *inst/ChangeLog
+7acba8f3374b4179a02f6d5ccd06a504 *inst/ChangeLog
 a3ba542a68d05af9a8ea03fae9da3c88 *inst/LICENCE
 9ab5a8ed1aabfe439c5bdc8e74dcc685 *man/Fhat.Rd
 921270ef9d2751c6736ac99c9e8b4dd5 *man/Fzero.Rd
@@ -98,7 +98,7 @@ a2843f8462e740c901f8c8aa892f2ab2 *man/inout.Rd
 7297c0a7abe0dbb24260844b6db66ec8 *man/inpip.Rd
 ad64cd906d8ec3eda7155caf465a52c1 *man/is.points.Rd
 f465a4e00cef076d8b8f09d60b485d12 *man/k12hat.Rd
-2c0712fbd12c12961077fc8ca2c19e19 *man/kernel2d.Rd
+a6267f81b1d8f37ccac8477fb9ad5924 *man/kernel2d.Rd
 544783678ab49e186c247d5692522c8c *man/kernel3d.Rd
 5807f4349625335cb3b397d2f459bd2e *man/kernrat.Rd
 0c8f46d6554515721333debe753a9fe2 *man/kerview.Rd
@@ -158,7 +158,7 @@ e1f4333eb739dc9470f06000379acc9c *src/krnnrm.f
 118d0ac94c3511f056a073fd49643526 *src/krnqrt.f
 5ca85280739ae6929654075311141325 *src/nndist.f
 c02979f03dd8967bbe40e27946cd83f8 *src/plarea.f
-7437f9739da427d8fbd450cf47f21a81 *src/ptinpoly.c
+6354e468a082f1d485064445632fade1 *src/ptinpoly.c
 69d1f2afc22eb478e9bc96329d777394 *src/sekhat.f
 6ac450dff5781582fcbeb387015f4688 *src/sort.f
 e00c57f910b097c3c1d8b3b563fcadbf *src/sort2.f
