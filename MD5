@@ -1,9 +1,9 @@
-7acba8f3374b4179a02f6d5ccd06a504 *ChangeLog
-171e26d9ef53975bbdd0fdd1500e4553 *DESCRIPTION
+8880ce8f37678f687b714b531d8920fe *ChangeLog
+cc11fc424ee13483b8f1ad12204037e1 *DESCRIPTION
 a3ba542a68d05af9a8ea03fae9da3c88 *LICENCE
 8ee803e936eea47efaa5a4ba338f6476 *NAMESPACE
 fde3be84d206b96ba2dbe2245dba7cfc *R/Fhat.S
-ba4f3eb33a83b1f2804be6e1c7f80f40 *R/First.lib.S
+0587a244b0c61f6d698052b7456eff43 *R/First.lib.S
 dbf416613866c0b5d6eb883112c10063 *R/Fzero.S
 1c3a41f88ac726ea1fbd0259dde96239 *R/Ghat.S
 282f7ceef09bf55f094f34059c01b726 *R/Kenv.csr.S
@@ -70,7 +70,7 @@ bd254c7837e8e40390841505b43117a2 *data/bodmin.rda
 35815dc81afa6bb94af6b4659c061124 *data/okwhite.rda
 191aeb75fdba6ad17b240d7e4d561aa0 *data/southlancs.rda
 54715466d8a45800757a69008e1ef37c *data/uganda.rda
-7acba8f3374b4179a02f6d5ccd06a504 *inst/ChangeLog
+8880ce8f37678f687b714b531d8920fe *inst/ChangeLog
 a3ba542a68d05af9a8ea03fae9da3c88 *inst/LICENCE
 9ab5a8ed1aabfe439c5bdc8e74dcc685 *man/Fhat.Rd
 921270ef9d2751c6736ac99c9e8b4dd5 *man/Fzero.Rd
