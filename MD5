@@ -1,6 +1,5 @@
-8880ce8f37678f687b714b531d8920fe *ChangeLog
-cc11fc424ee13483b8f1ad12204037e1 *DESCRIPTION
-a3ba542a68d05af9a8ea03fae9da3c88 *LICENCE
+e448a4243415989acacc566e8d9cc209 *ChangeLog
+9f6df41beedc3461cf6c2a278f731559 *DESCRIPTION
 8ee803e936eea47efaa5a4ba338f6476 *NAMESPACE
 fde3be84d206b96ba2dbe2245dba7cfc *R/Fhat.S
 0587a244b0c61f6d698052b7456eff43 *R/First.lib.S
@@ -70,8 +69,8 @@ bd254c7837e8e40390841505b43117a2 *data/bodmin.rda
 35815dc81afa6bb94af6b4659c061124 *data/okwhite.rda
 191aeb75fdba6ad17b240d7e4d561aa0 *data/southlancs.rda
 54715466d8a45800757a69008e1ef37c *data/uganda.rda
-8880ce8f37678f687b714b531d8920fe *inst/ChangeLog
-a3ba542a68d05af9a8ea03fae9da3c88 *inst/LICENCE
+e448a4243415989acacc566e8d9cc209 *inst/ChangeLog
+a3ba542a68d05af9a8ea03fae9da3c88 *inst/README
 9ab5a8ed1aabfe439c5bdc8e74dcc685 *man/Fhat.Rd
 921270ef9d2751c6736ac99c9e8b4dd5 *man/Fzero.Rd
 91a6380652a781a4baa739d4c225d58a *man/Ghat.Rd
@@ -86,7 +85,7 @@ e48ca773edf8fde6f9766a893997410a *man/areapl.Rd
 6fe69451e93934ebdf5da4977b91c3be *man/as.points.Rd
 1914c4158106c1ebbf85a40a689da990 *man/bbox.Rd
 4e2bc2908cf592792b46ffd0e0e22d1f *man/bodmin.Rd
-6387784193791b6f8b91c3adc61a3995 *man/burkitt.Rd
+99a604c810b4205cf7b57de0919441eb *man/burkitt.Rd
 a59e2786435f0117053cf2c5b0321b3f *man/cardiff.Rd
 f61c84ffff715b1059a27a5575f8c85d *man/csr.Rd
 ac669ff38900f47be10a5c8018984828 *man/delpoints.Rd
@@ -158,7 +157,7 @@ e1f4333eb739dc9470f06000379acc9c *src/krnnrm.f
 118d0ac94c3511f056a073fd49643526 *src/krnqrt.f
 5ca85280739ae6929654075311141325 *src/nndist.f
 c02979f03dd8967bbe40e27946cd83f8 *src/plarea.f
-6354e468a082f1d485064445632fade1 *src/ptinpoly.c
+97c73b2558049c10aad946c2caefd895 *src/ptinpoly.c
 69d1f2afc22eb478e9bc96329d777394 *src/sekhat.f
 6ac450dff5781582fcbeb387015f4688 *src/sort.f
 e00c57f910b097c3c1d8b3b563fcadbf *src/sort2.f
