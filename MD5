@@ -1,5 +1,5 @@
-a3487afa158b1c8daa2c987dbb26ed24 *ChangeLog
-44f642a783e0e581a461f7ffc69d168f *DESCRIPTION
+23471d90a060adfca2f8e8681b8f8c22 *ChangeLog
+718abd9396a6f20d286491945cd5f143 *DESCRIPTION
 8ee803e936eea47efaa5a4ba338f6476 *NAMESPACE
 fde3be84d206b96ba2dbe2245dba7cfc *R/Fhat.S
 0587a244b0c61f6d698052b7456eff43 *R/First.lib.S
@@ -18,7 +18,7 @@ d6fc3d4e3a8cfc5e0810c8df3f487bf8 *R/as.points.S
 4ac461929c6e69a0cc54b545f1c0516b *R/dsquare.S
 8de31470b9926f7c1eb92b37f080896e *R/getpoly.S
 066bbf1a1ce4813fb1cb3094a3e7fdfa *R/gridpts.S
-d136b521d22ca3b5d70d3183b7eb117f *R/inout.S
+7a9f882c661ec649e981f85e5c47b256 *R/inout.S
 cd532e8720e67d4fddf7827905cb648a *R/inpip.S
 11d9ec6b53a3d9f9b88f23029e761289 *R/is.points.S
 56505f507bfd1997d47245101817d81a *R/k12hat.S
@@ -69,7 +69,7 @@ bd254c7837e8e40390841505b43117a2 *data/bodmin.rda
 35815dc81afa6bb94af6b4659c061124 *data/okwhite.rda
 191aeb75fdba6ad17b240d7e4d561aa0 *data/southlancs.rda
 54715466d8a45800757a69008e1ef37c *data/uganda.rda
-a3487afa158b1c8daa2c987dbb26ed24 *inst/ChangeLog
+23471d90a060adfca2f8e8681b8f8c22 *inst/ChangeLog
 a3ba542a68d05af9a8ea03fae9da3c88 *inst/README
 9ab5a8ed1aabfe439c5bdc8e74dcc685 *man/Fhat.Rd
 921270ef9d2751c6736ac99c9e8b4dd5 *man/Fzero.Rd
@@ -144,7 +144,7 @@ b3d90ab5144243f49b46e5d157d05095 *man/triblik.Rd
 c24b52c78bf50859b1750ad14e956e1a *src/bounds.h
 084aa9d127fba4d7d720b4612b0ebcd5 *src/cncvwt.f
 27e08825f0a03ebab6afbd1a0853e747 *src/dokhat.f
-02d7ebbfde36220800f818a8439e2c79 *src/inpip.f
+40bf6d7e83be97437e85442f178a1282 *src/inpip.f
 1ebdc8d2ef390812763471f75670642d *src/ipippa.f
 bce2fcbd15a7db3adb887c67d6711977 *src/iplace.f
 3cc6310bac5684e734e3b8814d870e8d *src/k12hat.f
