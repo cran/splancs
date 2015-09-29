@@ -1,6 +1,6 @@
-815c2df3be6f8adaed21bdf03a453c0e *ChangeLog
-35a0db23a5d38d7c2b01e45542382c63 *DESCRIPTION
-efbd97f2d96dd1b9b0f382bba7e42456 *NAMESPACE
+6d14ed445836bd99dc9eafce8450aae9 *ChangeLog
+6ca0e2c678a35379dc365137f7c717d0 *DESCRIPTION
+6d28b858dfcfa45c38a56d2b4199a561 *NAMESPACE
 fde3be84d206b96ba2dbe2245dba7cfc *R/Fhat.S
 0587a244b0c61f6d698052b7456eff43 *R/First.lib.S
 dbf416613866c0b5d6eb883112c10063 *R/Fzero.S
@@ -69,7 +69,7 @@ bd254c7837e8e40390841505b43117a2 *data/bodmin.rda
 35815dc81afa6bb94af6b4659c061124 *data/okwhite.rda
 191aeb75fdba6ad17b240d7e4d561aa0 *data/southlancs.rda
 54715466d8a45800757a69008e1ef37c *data/uganda.rda
-815c2df3be6f8adaed21bdf03a453c0e *inst/ChangeLog
+6d14ed445836bd99dc9eafce8450aae9 *inst/ChangeLog
 a3ba542a68d05af9a8ea03fae9da3c88 *inst/README
 9ab5a8ed1aabfe439c5bdc8e74dcc685 *man/Fhat.Rd
 921270ef9d2751c6736ac99c9e8b4dd5 *man/Fzero.Rd
