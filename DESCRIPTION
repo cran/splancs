@@ -1,6 +1,6 @@
 Package: splancs
-Version: 2.01-42
-Date: 2021-04-20
+Version: 2.01-43
+Date: 2022-04-18
 Title: Spatial and Space-Time Point Pattern Analysis
 Authors@R: c(
 	person("Roger", "Bivand", role = c("cre"), email = "Roger.Bivand@nhh.no"),
@@ -14,7 +14,7 @@ Description: The Splancs package was written as an enhancement to S-Plus for dis
 License: GPL (>= 2)
 URL: https://www.maths.lancs.ac.uk/~rowlings/Splancs/
 NeedsCompilation: yes
-Packaged: 2021-04-20 11:44:36 UTC; rsb
+Packaged: 2022-04-17 16:40:51 UTC; rsb
 Author: Roger Bivand [cre],
   Barry Rowlingson [aut],
   Peter Diggle [aut],
@@ -22,4 +22,4 @@ Author: Roger Bivand [cre],
   Stephen Eglen [ctb]
 Maintainer: Roger Bivand <Roger.Bivand@nhh.no>
 Repository: CRAN
-Date/Publication: 2021-04-20 14:20:05 UTC
+Date/Publication: 2022-04-17 23:50:02 UTC

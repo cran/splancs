@@ -47,7 +47,7 @@ plot(Mse2d$h[5:50],Mse2d$mse[5:50], type="l")
 }
 
 \references{
-Berman M. \& Diggle P.J. (1989) Estimating Weighted Integrals of the
+Berman M. & Diggle P.J. (1989) Estimating Weighted Integrals of the
 Second-Order Intensity of a Spatial Point Pattern. 
 \emph{ J. R. Statist Soc} B 51 81--92;
 Rowlingson, B. and Diggle, P. 1993 Splancs: spatial point pattern analysis
